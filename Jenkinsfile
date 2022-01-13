@@ -140,6 +140,7 @@ pipeline {
                         dir("employee-service") {
                             
                             echo "in project employee-service"
+                            echo "ls"
 
                             withEnv([
                                         "SERVICE=employee",
@@ -162,6 +163,7 @@ pipeline {
                         dir("department-service") {
                             
                             echo "in project department-service"
+                            echo "ls"
 
                             withEnv([
                                         "SERVICE=department",
@@ -181,9 +183,10 @@ pipeline {
                     steps {
                         
                         echo "deploy organization"
-                        dir("organization") {
+                        dir("organization-service") {
                             
                             echo "in project organization"
+                            echo "ls"
 
                             withEnv([
                                         "SERVICE=organization",
