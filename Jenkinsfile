@@ -145,7 +145,7 @@ pipeline {
                             withEnv([
                                         "SERVICE=employee",
                                         "NAMESPACE=${params.deploy_env_choice}",
-                                        "TAG=latest"
+                                        "TAG=1.1"
                                     ]){
                                         echo "Deploy image to k8s cluster [env ${params.deploy_env_choice}]  ..."
                                         sh "./deployment/deploy.sh"
@@ -168,7 +168,7 @@ pipeline {
                             withEnv([
                                         "SERVICE=department",
                                         "NAMESPACE=${params.deploy_env_choice}",
-                                        "TAG=latest"
+                                        "TAG=1.1"
                                     ]){
                                         echo "Deploy image to k8s cluster [env ${params.deploy_env_choice}]  ..."
                                         sh "./deployment/deploy.sh"
@@ -191,7 +191,7 @@ pipeline {
                             withEnv([
                                         "SERVICE=organization",
                                         "NAMESPACE=${params.deploy_env_choice}",
-                                        "TAG=latest"
+                                        "TAG=1.1"
                                     ]){
                                     /* Build the docker image */
                                         echo "Deploy image to k8s cluster [env ${params.deploy_env_choice}]  ..."
