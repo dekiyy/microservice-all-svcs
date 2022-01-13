@@ -58,7 +58,6 @@ pipeline {
                         dir("employee-service") {
                             
                             echo "Git deploy yaml in project employee-service"
-                            git url: 'https://github.com/zjx-immersion/employee-service.git'
                             git branch: 'main', credentialsId: 'zjx-github', url: 'https://github.com/zjx-immersion/employee-service.git'
 
                             withEnv([
@@ -67,7 +66,9 @@ pipeline {
                                     ]){
                                     /* Pull the docker image */
                                         echo "Downloading the image  ..."
-                                        sh "docker pull ${SERVICE}:${TAG}"
+                                        // sh "docker pull ${SERVICE}:${TAG}"
+                                        echo "Is the image canbe run ?"
+                                        sh "docker image inspect ${SERVICE}:${TAG}"
                                     }
                         }
                     }
@@ -91,7 +92,9 @@ pipeline {
                                     ]){
                                     /* Pull the docker image */
                                         echo "Downloading the image  ..."
-                                        sh "docker pull ${SERVICE}:${TAG}"
+                                        // sh "docker pull ${SERVICE}:${TAG}"
+                                        echo "Is the image canbe run ?"
+                                        sh "docker image inspect ${SERVICE}:${TAG}"
                                     }
                         }
                     }
@@ -115,7 +118,9 @@ pipeline {
                                     ]){
                                     /* Pull the docker image */
                                         echo "Downloading the image  ..."
-                                        sh "docker pull ${SERVICE}:${TAG}"
+                                        // sh "docker pull ${SERVICE}:${TAG}"
+                                        echo "Is the image canbe run ?"
+                                        sh "docker image inspect ${SERVICE}:${TAG}"
                                     }
                         }
                     }
