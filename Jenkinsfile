@@ -58,7 +58,7 @@ pipeline {
                         dir("employee-service") {
                             
                             echo "Git deploy yaml in project employee-service"
-                            git branch: 'main', credentialsId: 'zjx-github', url: 'https://github.com/zjx-immersion/employee-service.git'
+                            git branch: 'main', credentialsId: '8c993f8f-5bbe-4ba8-b4a7-f673ff0d6f26', url: 'https://github.com/dekiyy/employee-service.git'
 
                             withEnv([
                                         "SERVICE=employee",
@@ -84,7 +84,7 @@ pipeline {
                         dir("department-service") {
                             
                             echo "Git deploy yaml in project department-service"
-                            git branch: 'main', credentialsId: 'zjx-github', url: 'https://github.com/zjx-immersion/department-service.git'
+                            git branch: 'main', credentialsId: '8c993f8f-5bbe-4ba8-b4a7-f673ff0d6f26', url: 'https://github.com/dekiyy/department-service.git'
 
                             withEnv([
                                         "SERVICE=department",
@@ -110,7 +110,7 @@ pipeline {
                         dir("organization-service") {
                             
                             echo "Git deploy yaml in project organization-service"
-                            git branch: 'main', credentialsId: 'zjx-github', url: 'https://github.com/zjx-immersion/organization-service.git'
+                            git branch: 'main', credentialsId: '8c993f8f-5bbe-4ba8-b4a7-f673ff0d6f26', url: 'https://github.com/dekiyy/organization-service.git'
 
                             withEnv([
                                         "SERVICE=organization",
